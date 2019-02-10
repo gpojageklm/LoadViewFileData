@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="upload-wrapper">
+      <!-- FileUpload Child Component with emiting file data -->
+      <app-upload-data (fileUploaded)="onFileUploaded($event)"></app-upload-data>
+    </div>
+
+    <div class="data-wrapper">
+      <!--DisplayData Child Component with data bound input field -->
+      <app-display-data [records]="data"></app-display-data>
+    </div>
+</div>

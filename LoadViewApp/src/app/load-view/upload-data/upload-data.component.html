@@ -1,0 +1,25 @@
+<div>
+  <!--Input File HTML Element with accepts attribute set to .csv-->
+  <div class="btn-container">
+    <input
+      type="file"
+      name="csvFileImport"
+      id="csvFileImport"
+      class="btn"
+      #fileImportInput
+      (change)="onFileChange($event, error)"
+      accept=".csv"
+    />
+    <!--Input Button HTML Element to reset the component data-->
+    <input
+      type="button"
+      name="reset"
+      id="csvFileReset"
+      class="btn-reset"
+      (click)="resetFile()"
+      value="Reset"
+    />
+  </div>
+  <!--Div Elemenent to display error in case of file validation failure-->
+  <div class="error" #error>{{ errorText }}</div>
+</div>

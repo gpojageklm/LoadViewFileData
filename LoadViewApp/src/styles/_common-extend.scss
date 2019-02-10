@@ -1,0 +1,15 @@
+%font-common {
+    font-family:$font-stack;
+    font-weight:normal;
+    font-style:normal;
+    font-size:1rem;
+    line-height:1em;
+}
+%position-common {
+  display:block;
+  position:relative;
+  left:0;
+  top:0;
+  margin:0;
+  padding:0;
+}

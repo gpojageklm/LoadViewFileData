@@ -1,0 +1,11 @@
+@import "../../styles/foundation";
+.container {
+  @extend %position-common;
+  position:absolute;
+  left:2em;
+  top:2em;
+  .upload-wrapper,.data-wrapper{
+    position:relative;
+  }
+}
+

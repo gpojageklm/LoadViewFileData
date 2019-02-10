@@ -1,0 +1,23 @@
+@import "../../../styles/foundation";
+.btn-container {
+  .btn,.btn-reset {
+      @extend %position-common;
+      @extend %font-common;
+      display:inline-block;
+      border: $border-default;
+      color: $color-light-slategray;
+      background-color: $background-default-color;
+      padding: .5em 1.25em;
+      border-radius: .5em;
+  }
+  .btn-reset  {
+      width:5em;
+      background-color:$color-skyblue;
+      color: $color-white;
+      margin-left:.5em;
+  }
+}
+.error {
+    color:$error-txt-color;
+    text-align:center;
+}

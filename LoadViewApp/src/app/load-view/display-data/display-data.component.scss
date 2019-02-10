@@ -1,0 +1,40 @@
+@import "../../../styles/foundation";
+.data-container {
+   @extend %position-common;
+   @extend %font-common;
+   width:100%;
+    .data-table {
+        tr {
+          &:nth-child(1) {
+              background: $data-row-color;
+              color:$color-white;
+          }
+          &:hover {
+              background-color: $elem-hover-color;
+          }
+          &:nth-child(1):hover {
+              background: $data-row-color;
+          }
+          td {
+            border: $border-default;
+            padding: 0.5rem;
+          }
+        }
+    }
+    .filter-field {
+        padding:.5em;
+        height:1.2em;
+        border-radius: .5em;
+        font-size:1em;
+        line-height:1em;
+        margin:.5em 0 .5em 0;
+        width:10em;
+    }
+    .no-result {
+        color: $error-txt-color;
+    }
+}
+
+
+
+

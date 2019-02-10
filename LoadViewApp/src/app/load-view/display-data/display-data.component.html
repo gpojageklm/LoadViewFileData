@@ -1,0 +1,31 @@
+<div class="data-container">
+  <!--Filter Input text field rendered only when  records exists-->
+  <div *ngIf="records.length >= 1">
+    <input
+      type="text"
+      id="filterField"
+      class="filter-field"
+      [placeholder]="defaultFilterText"
+      [(ngModel)]="filterTerm"
+      name="filterTerm" value=""
+    />
+  </div>
+  <!--Table Element to be rendered only when  records exists-->
+  <div *ngIf="filteredRecords.length >= 1" class="data-table">
+    <table>
+      <!--Repeat for Each row in record Array which is Array of Array-->
+      <ng-container *ngFor="let row of filteredRecords; let i = index">
+        <tr>
+          <!--Repeat for Each cell in row of individual row -->
+          <ng-container *ngFor="let cell of row; let j = index">
+            <!-- Date string validation and displaying in specific format using custom pipe-->
+              <td >{{ cell | valueFormat}}</td>
+          </ng-container>
+        </tr>
+      </ng-container>
+    </table>
+  </div>
+  <!--Div to display user friendly message when no result
+     retrieved with filter criteria provided -->
+  <div class="no-result">{{ filterResultNotFoundText }}</div>
+</div>
